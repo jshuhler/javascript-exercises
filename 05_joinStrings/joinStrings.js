@@ -9,9 +9,20 @@
 
 // Add your code right below, good luck!
 
+const firstName = "Carlos";
+const lastName = "Stevenson";
+const thisYear = 1965;
+const birthYear = 1947;
 
+const fullName = `${firstName} ${lastName}`;
+// const fullName =  firstName + " " + lastName;
+// this part can be done with normal concatenation or with template literals! Claude thinks that it's better to do it with template literals for cleaner to read code.
 
+const age = (thisYear - birthYear);
 
+const greeting = "Hello! My name is " + fullName + " and I am " + age + " years old.";
+
+console.log(greeting);
 
 // Do not change this
 module.exports = {
