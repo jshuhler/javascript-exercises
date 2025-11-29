@@ -15,3 +15,22 @@ Still confused? Refer to <cite>[this breakdown](https://time-and-calendar.com/le
 
 ## Hints
 - use an `if` statement and `&&` to make sure all the conditions are met properly
+
+# notes
+- years divisible by 4 are leap years, unless they are divisible by 100 and not 400.
+- years not divisible by 100 and not divisible by 400 are **not** leap years
+- years not divisible by 100 and divisible by 400 are leap years
+
+Another way of looking at it:
+- a year is a leap year if it is divisible by 4, unless it's divisible by 100 but not by 400
+
+- maybe need to work backwards?
+# pseudocode
+- if the year is divisible by 4, check next step
+    -if not divisible by 4, print not leap year
+- if the year is not divisible by 
+- divisible by 4, not divisible by 100, divisible by 400
+- divisible by 4, 
+
+Note from Mao on discord:
+"If it's divisible by 400, it's definitely a leap year. If not, then it's still a leap year if it's divisible by 4 but not 100."
