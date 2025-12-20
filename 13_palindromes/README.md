@@ -16,4 +16,25 @@ palindromes('racecar') // true
 palindromes('tacos') // false
 ```
 
+x lowercase string
+x turn string to array
+x remove punctuation - against a predefined list - ! " # $ % & ' ( ) * + , - . / : ; ? @ [ \ ] ^ _ ` { | } ~ 
+x remove any spaces from the array
+    filter  
+x reverse the array to a new array
+x convert each lowercase, no psace, no punc array back to a string
+x compare the new strings
 
+remove from array
+```js
+const removeFromArray = function(originalArr,...args) {
+    return originalArr.filter((num) => {
+        for (let i = 0; i < args.length; i++) {
+            if (num === args[i]) {
+                return false;
+            }
+        }
+        return true;
+    });
+}
+```
