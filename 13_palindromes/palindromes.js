@@ -5,17 +5,16 @@ const palindromes = function () {
     let stringLower = string.toLowerCase();
     let arr = stringLower.split("");
     let arrNoPunc = arr.filter(char => {
-        !punctuation.includes(char);
+        return !punctuation.includes(char);
     });
     let arrNoSpaces = arrNoPunc.filter((items) => {
-    let spaces = " ";
-    return items !== spaces;
+        let spaces = " ";
+        return items !== spaces;
     });
     let arrNoSpacesReverse = arrNoSpaces.toReversed();
     let noSpaces = arrNoSpaces.join('');
     let noSpacesReverse = arrNoSpacesReverse.join('');
     return noSpaces === noSpacesReverse;
-
 };
 
 // initial variables
