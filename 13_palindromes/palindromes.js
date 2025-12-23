@@ -1,40 +1,22 @@
-let string = "Lid off a daffodil."
+// let string = "Lid off a daffodil."
 let punctuation = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~'];
 
-const palindromes = function () {
-    let stringLower = string.toLowerCase();
-    let arr = stringLower.split("");
-    let arrNoPunc = arr.filter(char => {
-        return !punctuation.includes(char);
-    });
-    let arrNoSpaces = arrNoPunc.filter((items) => {
-        let spaces = " ";
-        return items !== spaces;
-    });
-    let arrNoSpacesReverse = arrNoSpaces.toReversed();
-    let noSpaces = arrNoSpaces.join('');
-    let noSpacesReverse = arrNoSpacesReverse.join('');
+const palindromes = function (string) {
+    // let stringLower = string.toLowerCase();
+    // let arr = stringLower.split("");
+    let arr = string
+        .toLowerCase()
+        .split("");
+    let arrCleaned = arr
+        .filter (char => !punctuation.includes(char))
+        .filter (items => items !== " ")
+    let arrCleanedReverse = arrCleaned.toReversed();
+    let noSpaces = arrCleaned.join('');
+    let noSpacesReverse = arrCleanedReverse.join('');
+    console.log(noSpaces === noSpacesReverse);
     return noSpaces === noSpacesReverse;
 };
 
-// initial variables
+// palindromes("racecar.");
 
-// lowercase string
-
-
-// string to array
-
-// remove punctuation
-
-
-// remove spaces - change arr.filter to arrNoPunc.filter when the above function is ready
-
-// reverse arrNoSpaces 
-
-// change the arrays back to strings
-
-
-// compare the strings
-
-
-palindromes("string");
+module.exports = palindromes;
